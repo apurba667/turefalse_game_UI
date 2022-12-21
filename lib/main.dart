@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
 debugShowCheckedModeBanner: false,
-      home: const SettingsPage(),
+      home: const LoadingPage(),
     );
   }
 }

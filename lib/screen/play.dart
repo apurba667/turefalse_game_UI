@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:turefalse/const/const.dart';
+
+import 'home.dart';
 
 class PlayPage extends StatelessWidget {
   const PlayPage({Key? key}) : super(key: key);
@@ -9,45 +13,50 @@ class PlayPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: 415,
-            width: 775,
+            height: Dimensions.height415,
+            width: Dimensions.width775,
             child: Image.asset("assets/playbackground.png",fit: BoxFit.fill,),
           ),
           Positioned(
-              top: 85,
-              width: 770,
+              top: Dimensions.height85,
+              width: Dimensions.width775,
               child: Image.asset("assets/Line1.png",fit: BoxFit.fill,)),
           Positioned(
-              top: 300,
-              width: 770,
+              top: Dimensions.height300,
+              width: Dimensions.width775,
               child: Image.asset("assets/Line1.png",fit: BoxFit.fill,)),
           Positioned(
-              top: 16,
-              left: 10,
+              top: Dimensions.height16,
+              left: Dimensions.width10,
               child: Image.asset("assets/Group13.png")),
           Positioned(
-              top: 16,
-              right: 10,
+              top: Dimensions.height16,
+              right: Dimensions.width10,
               child: Image.asset("assets/Group11.png")),
           Positioned(
-              bottom: 16,
-              left: 20,
-              child: Image.asset("assets/Group14.png")),
+              bottom: Dimensions.height16,
+              left: Dimensions.width20,
+              child: Bounce(
+                  duration: Duration(milliseconds: 300),
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                  },
+                  child: Image.asset("assets/Group14.png"))),
           Positioned(
-              bottom: 26,
-              left: 220,
+              bottom: Dimensions.height26,
+              left: Dimensions.width220,
               child: Image.asset("assets/Group7.png")),
           Positioned(
-              bottom: 26,
-              left: 360,
+              bottom: Dimensions.height26,
+              left: Dimensions.width360,
               child: Image.asset("assets/Group8.png")),
           Positioned(
-              top: 105,
-              left: 210,
+              top: Dimensions.height105,
+              left: Dimensions.width210,
               child: Image.asset("assets/playtraced.png")),
           Positioned(
-              top: 145,
-              left: 260,
+              top: Dimensions.height145,
+              left: Dimensions.width260,
               child: Image.asset("assets/playcontent.png")),
         ],
       ),

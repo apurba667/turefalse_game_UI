@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turefalse/const/const.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -8,51 +9,51 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       body: Stack(children: [
         Container(
-          height: 415,
-          width: 775,
+          height: Dimensions.height415,
+          width: Dimensions.width775,
           child: Image.asset("assets/leaderboard.png",fit: BoxFit.cover,),
         ),
         Positioned(
-            height: 31,
-            width: 31,
-            top: 25,
-            left: 29,
+            height: Dimensions.height30,
+            width: Dimensions.width30,
+            top: Dimensions.height35,
+            left: Dimensions.width29,
             child: Image.asset("assets/back.png")),
         Positioned(
-            height: 30,
-            width: 104,
-            top: 45,
-            left: 288,
+            height: Dimensions.height30,
+            width: Dimensions.width104,
+            top: Dimensions.height55,
+            left: Dimensions.width308,
             child: Image.asset("assets/SETTING.png")),
         Positioned(
-            height: 122,
-            width: 204,
-            top: 134,
-            left: 275,
+            height: Dimensions.height122,
+            width: Dimensions.width204,
+            top: Dimensions.height135,
+            left: Dimensions.width275,
             child: Image.asset("assets/Rectangles.png",fit: BoxFit.contain,)),
         Positioned(
-            height: 34,
-            width: 71,
-            top: 164,
-            left: 295,
+            height: Dimensions.height35,
+            width: Dimensions.width71,
+            top: Dimensions.height164,
+            left: Dimensions.width296,
             child: Image.asset("assets/Sound.png",fit: BoxFit.contain,)),
         Positioned(
-            height: 34,
-            width: 81,
-            top: 194,
-            left: 295,
+            height: Dimensions.height35,
+            width: Dimensions.width81,
+            top: Dimensions.height194,
+            left: Dimensions.width296,
             child: Image.asset("assets/Vibration.png",fit: BoxFit.contain,)),
         Positioned(
-            height: 19,
-            width: 37,
-            top: 174,
-            left: 395,
+            height: Dimensions.height19,
+            width: Dimensions.width37,
+            top: Dimensions.height174,
+            left: Dimensions.width395,
             child: Image.asset("assets/button.png",fit: BoxFit.contain,)),
         Positioned(
-            height: 19,
-            width: 37,
-            top: 204,
-            left: 395,
+            height: Dimensions.height19,
+            width: Dimensions.width37,
+            top: Dimensions.height204,
+            left: Dimensions.width395,
             child: Image.asset("assets/button2.png",fit: BoxFit.contain,)),
       ],),
     );

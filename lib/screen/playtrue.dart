@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:turefalse/const/const.dart';
+
+import 'home.dart';
 
 class PlayTrue extends StatelessWidget {
   const PlayTrue({Key? key}) : super(key: key);
@@ -9,57 +13,62 @@ class PlayTrue extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: 415,
-            width: 775,
+            height: Dimensions.height415,
+            width: Dimensions.width775,
             child: Image.asset("assets/playbackground.png",fit: BoxFit.fill,),
           ),
           Positioned(
-              top: 85,
-              width: 770,
+              top: Dimensions.height85,
+              width: Dimensions.width775,
               child: Image.asset("assets/Line1.png",fit: BoxFit.fill,)),
           Positioned(
-              top: 300,
-              width: 770,
+              top: Dimensions.height300,
+              width: Dimensions.width775,
               child: Image.asset("assets/Line1.png",fit: BoxFit.fill,)),
           Positioned(
-              top: 16,
-              left: 10,
+              top: Dimensions.height16,
+              left: Dimensions.width10,
               child: Image.asset("assets/Group13.png")),
           Positioned(
-              top: 16,
-              right: 10,
+              top: Dimensions.height16,
+              right: Dimensions.width10,
               child: Image.asset("assets/Group11.png")),
           Positioned(
-              bottom: 16,
-              left: 20,
-              child: Image.asset("assets/Group14.png")),
+              bottom: Dimensions.height16,
+              left: Dimensions.width20,
+              child: Bounce(
+                  duration: Duration(milliseconds: 300),
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                  },
+                  child: Image.asset("assets/Group14.png"))),
           Positioned(
-              bottom: 26,
-              left: 220,
+              bottom: Dimensions.height26,
+              left: Dimensions.width228,
               child: Image.asset("assets/Group7t.png")),
           Positioned(
-              bottom: 26,
-              left: 360,
+              bottom: Dimensions.height26,
+              left: Dimensions.width360,
               child: Image.asset("assets/Group8.png")),
           Positioned(
-            top: 105,
+            top: Dimensions.height105,
               right: 0,
               child: Image.asset("assets/image2.png",opacity:AlwaysStoppedAnimation(0.5),)),
           Positioned(
-              top: 145,
-              right: 10,
+              top: Dimensions.height145,
+              right: Dimensions.width10,
               child: Image.asset("assets/playcontent.png",opacity:AlwaysStoppedAnimation(0.5),)),
           Positioned(
-              bottom: 36,
-              left: 211,
+              bottom: Dimensions.height36,
+              left: Dimensions.width220,
               child: Image.asset("assets/Group.png")),
           Positioned(
-              bottom: 66,
-              left: 321,
+              bottom: Dimensions.height66,
+              left: Dimensions.width326,
               child: Image.asset("assets/Group22.png")),
           Positioned(
-              bottom: 116,
-              left: 230,
+              bottom: Dimensions.height122,
+              left: Dimensions.width231,
               child: Image.asset("assets/Group33.png")),
 
         ],
